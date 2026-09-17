@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camp Restaurant & Cafe | مطعم وكافيه كامب</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Cairo for Arabic styling) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#121212',
+                        cardBg: '#1a1a1a',
+                        cardHover: '#242424',
+                        amberAccent: '#d97706',
+                        amberHover: '#b45309',
+                        goldText: '#fbbf24'
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(18, 18, 18, 0.75), rgba(18, 18, 18, 0.85)), url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-100 antialiased selection:bg-amberAccent selection:text-white">
+
+    <!-- Header / Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-darkBg/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center shadow-lg shadow-amber-600/20 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-mug-hot text-darkBg text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-black tracking-wider text-white block">CAMP</span>
+                    <span class="text-[10px] text-amber-500 tracking-widest uppercase block -mt-1">Cafe & Restaurant • Since 2014</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-300">
+                <a href="#home" class="hover:text-amberAccent transition-colors">الرئيسية</a>
+                <a href="#about" class="hover:text-amberAccent transition-colors">من نحن</a>
+                <a href="#branches" class="hover:text-amberAccent transition-colors">فروعنا</a>
+                <a href="#services" class="hover:text-amberAccent transition-colors">خدماتنا</a>
+                <a href="#gallery" class="hover:text-amberAccent transition-colors">اللحظات</a>
+                <a href="#contact" class="hover:text-amberAccent transition-colors">اتصل بنا</a>
+            </nav>
+
+            <!-- Book a Table CTA -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#branches" class="bg-amberAccent hover:bg-amberHover text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-amber-600/20 transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-bookmark ml-2"></i> احجز ترابيزتك
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cardBg border-b border-gray-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-gray-300 hover:text-amberAccent font-medium">الرئيسية</a>
+            <a href="#about" class="block py-2 text-gray-300 hover:text-amberAccent font-medium">من نحن</a>
+            <a href="#branches" class="block py-2 text-gray-300 hover:text-amberAccent font-medium">فروعنا</a>
+            <a href="#services" class="block py-2 text-gray-300 hover:text-amberAccent font-medium">خدماتنا</a>
+            <a href="#gallery" class="block py-2 text-gray-300 hover:text-amberAccent font-medium">اللحظات</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-amberAccent font-medium">اتصل بنا</a>
+            <a href="#branches" class="block text-center bg-amberAccent text-white py-3 rounded-xl font-bold shadow-md mt-4">
+                احجز ترابيزتك الآن
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-transparent to-transparent"></div>
+        <div class="max-w-5xl mx-auto px-4 text-center relative z-10 py-20">
+            <span class="inline-block bg-amber-500/10 text-goldText text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full border border-amber-500/20 mb-6 tracking-wide">
+                ⭐ مكانك المفضل منذ 2014
+            </span>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-6">
+                طعم فريش يفتح النفس <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">وانتعاش يخلي كل قعدة ليه طعم مختلف ✨</span>
+            </h1>
+            <p class="text-lg sm:text-2xl text-gray-300 font-light mb-10 max-w-2xl mx-auto">
+                انت صاحب مكان وفي بيتك التاني ☕❤️ استمتع بأجواء دافئة، ألذ المشروبات، وأحلى السهرات.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#branches" class="w-full sm:w-auto bg-amberAccent hover:bg-amberHover text-white px-8 py-4 rounded-xl font-bold text-base shadow-xl shadow-amber-600/35 transition-all transform hover:-translate-y-1">
+                    <i class="fa-solid fa-location-dot ml-2"></i> اكتشف فروعنا وتواصل معنا
+                </a>
+                <a href="#services" class="w-full sm:w-auto bg-cardBg hover:bg-cardHover text-gray-200 border border-gray-700 px-8 py-4 rounded-xl font-bold text-base transition-all">
+                    خدماتنا وأجوائنا
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-cardBg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-amber-500 font-bold uppercase tracking-widest text-xs">قصتنا</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white">مش مجرد كافيه.. ده بيتك التاني من 2014</h2>
+                    <p class="text-gray-300 leading-relaxed text-base sm:text-lg">
+                        منذ انطلاقتنا في عام 2014، وهدفنا الأساسي هو خلق مساحة تجمع الأصدقاء والعائلات في بيئة دافئة ومريحة تشبه البيت. في <strong class="text-amber-400">كامب</strong>، نؤمن بأن كل زيارة يجب أن تكون تجربة استثنائية تبدأ من القهوة المظبوطة، مروراً بالأطباق والمشروبات الفريش، وصولاً إلى أجواء الاحتفالات والسعادة اللي بتجمعنا.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 pt-4">
+                        <div class="p-4 rounded-2xl bg-darkBg border border-gray-800">
+                            <span class="text-3xl font-black text-amber-500 block mb-1">10+</span>
+                            <span class="text-sm text-gray-400">سنوات من الخبرة والتميز</span>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-darkBg border border-gray-800">
+                            <span class="text-3xl font-black text-amber-500 block mb-1">2</span>
+                            <span class="text-sm text-gray-400">فروع بخدمة ممتازة (الرحاب ورأس البر)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-800">
+                        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="Camp Cafe Vibe" class="w-full h-[400px] sm:h-[450px] object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-darkBg/95 backdrop-blur-md p-6 rounded-2xl border border-gray-800 shadow-xl hidden sm:block max-w-xs">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">أجواء عائلية دافئة</h4>
+                                <p class="text-xs text-gray-400">مصممة لراحة بالك وسعادتك</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branches Section -->
+    <section id="branches" class="py-24 bg-darkBg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 font-bold uppercase tracking-widest text-xs">زورنا في أي وقت</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white mt-2 mb-4">فروعنا</h2>
+                <p class="text-gray-400 text-base sm:text-lg">اختر الفرع الأقرب إليك واستمتع بخدمة استثنائية وأجواء ساحرة.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Branch 1: Al Rehab -->
+                <div class="bg-cardBg rounded-3xl p-8 border border-gray-800 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between group shadow-xl">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="bg-amber-500/10 text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/20">فرع رئيسي</span>
+                            <i class="fa-solid fa-store text-amber-500 text-2xl group-hover:scale-110 transition-transform"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-2">فرع الرحاب</h3>
+                        <p class="text-gray-300 text-sm mb-6 flex items-start gap-2">
+                            <i class="fa-solid fa-location-dot text-amber-500 mt-1"></i>
+                            <span>السوق القديم - أمام تسيباس</span>
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-gray-800 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-gray-400 block mb-1">للحجز والاستفسار:</span>
+                            <a href="tel:01031748702" dir="ltr" class="text-white font-bold text-lg hover:text-amber-400 transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-phone text-amber-500 text-sm"></i> 01031748702
+                            </a>
+                        </div>
+                        <a href="tel:01031748702" class="bg-amberAccent hover:bg-amberHover text-white w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg transition-transform hover:scale-105">
+                            <i class="fa-solid fa-phone-flip"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Branch 2: Ras El Bar -->
+                <div class="bg-cardBg rounded-3xl p-8 border border-gray-800 hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between group shadow-xl">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="bg-amber-500/10 text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/20">فرع المصيف</span>
+                            <i class="fa-solid fa-umbrella-beach text-amber-500 text-2xl group-hover:scale-110 transition-transform"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-2">فرع رأس البر</h3>
+                        <p class="text-gray-300 text-sm mb-6 flex items-start gap-2">
+                            <i class="fa-solid fa-location-dot text-amber-500 mt-1"></i>
+                            <span>الجربي السياحي</span>
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-gray-800 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-gray-400 block mb-1">للحجز والاستفسار:</span>
+                            <a href="tel:01050950025" dir="ltr" class="text-white font-bold text-lg hover:text-amber-400 transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-phone text-amber-500 text-sm"></i> 01050950025
+                            </a>
+                        </div>
+                        <a href="tel:01050950025" class="bg-amberAccent hover:bg-amberHover text-white w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg transition-transform hover:scale-105">
+                            <i class="fa-solid fa-phone-flip"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights / Services Section -->
+    <section id="services" class="py-24 bg-cardBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 font-bold uppercase tracking-widest text-xs">تجربتك معنا</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white mt-2 mb-4">ليه تختار كامب؟</h2>
+                <p class="text-gray-400 text-base sm:text-lg">نوفر لك كل وسائل الراحة والترفيه لتناسب كل أوقاتك.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-darkBg p-8 rounded-3xl border border-gray-800 hover:border-amber-500/40 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-amberAccent group-hover:text-white transition-all">
+                        <i class="fa-solid fa-martini-glass-citrus"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">مشروبات وموهيتو فريش</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">تشكيلة واسعة من المشروبات المنعشة والموهيتو المصنوعة خصيصاً لتعديل المزاج.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-darkBg p-8 rounded-3xl border border-gray-800 hover:border-amber-500/40 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-amberAccent group-hover:text-white transition-all">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">حفلات أعياد الميلاد</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">تجهيزات كاملة لأعياد الميلاد وأعياد الزواج لجعل مناسباتكم الخاصة لا تُنسى.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-darkBg p-8 rounded-3xl border border-gray-800 hover:border-amber-500/40 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-amberAccent group-hover:text-white transition-all">
+                        <i class="fa-solid fa-tv"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">مباريات وأجواء حماسية</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">شاشات عرض عملاقة لمشاهدة أهم المباريات المحلية والعالمية بأجواء حماسية.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-darkBg p-8 rounded-3xl border border-gray-800 hover:border-amber-500/40 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-amberAccent group-hover:text-white transition-all">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">قعدات خارجية مريحة</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">جلسات خارجية هادئة مصممة بعناية لتناسب الهوا الطلق والاسترخاء التام.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Vibe Section -->
+    <section id="gallery" class="py-24 bg-darkBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 font-bold uppercase tracking-widest text-xs">لحظاتكم في كامب</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white mt-2 mb-4">أجواء تعبر عن نفسها</h2>
+                <p class="text-gray-400 text-base sm:text-lg">لمحة سريعة من أكلنا، مشروباتنا، وأحلى ذكرياتكم معنا.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="relative rounded-3xl overflow-hidden group h-72 border border-gray-800">
+                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=600&q=80" alt="Cafe Vibe" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-bold text-lg">أجواء مسائية ساحرة 🌙</span>
+                    </div>
+                </div>
+                <div class="relative rounded-3xl overflow-hidden group h-72 border border-gray-800">
+                    <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80" alt="Coffee" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-bold text-lg">قهوة مظبوطة ☕</span>
+                    </div>
+                </div>
+                <div class="relative rounded-3xl overflow-hidden group h-72 border border-gray-800 sm:col-span-2 lg:col-span-1">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Drinks & Mojitos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <span class="text-white font-bold text-lg">موهيتو ومشروبات فريش ✨</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-cardBg border-t border-gray-800 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-gray-800">
+                <!-- Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-10 h-10 rounded-xl bg-amber-600 flex items-center justify-center text-darkBg font-bold">
+                            <i class="fa-solid fa-mug-hot text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="text-xl font-black tracking-wider text-white block">CAMP</span>
+                            <span class="text-[10px] text-amber-500 tracking-widest uppercase block -mt-1">Cafe & Restaurant</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        انت صاحب مكان وفي بيتك التاني منذ 2014. نسعى دائماً لتقديم أفضل تجربة ضيافة وأجواء دافئة لجميع عملائنا.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">روابط سريعة</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#home" class="hover:text-amber-400 transition-colors">الرئيسية</a></li>
+                        <li><a href="#about" class="hover:text-amber-400 transition-colors">من نحن</a></li>
+                        <li><a href="#branches" class="hover:text-amber-400 transition-colors">فروعنا وأرقام التواصل</a></li>
+                        <li><a href="#services" class="hover:text-amber-400 transition-colors">الخدمات والمميزات</a></li>
+                        <li><a href="#gallery" class="hover:text-amber-400 transition-colors">اللحظات والأجواء</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social & Contact -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">تواصل معنا</h4>
+                    <p class="text-gray-400 text-sm mb-4">تابعنا على منصات التواصل الاجتماعي ليصلك كل جديد وعروضنا المستمرة.</p>
+                    <div class="flex items-center gap-3">
+                        <a href="#" class="w-10 h-10 rounded-xl bg-darkBg hover:bg-amber-600 hover:text-white text-gray-300 flex items-center justify-center border border-gray-800 transition-all">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-darkBg hover:bg-amber-600 hover:text-white text-gray-300 flex items-center justify-center border border-gray-800 transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-darkBg hover:bg-amber-600 hover:text-white text-gray-300 flex items-center justify-center border border-gray-800 transition-all">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
+                <p>© 2014 - 2026 Camp Restaurant & Cafe. جميع الحقوق محفوظة.</p>
+                <p class="mt-2 sm:mt-0">مطعم وكافيه كامب • بيتك التاني ☕❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
